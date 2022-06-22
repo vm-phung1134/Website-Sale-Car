@@ -1,0 +1,186 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+}
+
+.main {
+  background: #f8f8f8;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+
+.skw-pages {
+  overflow: hidden;
+  position: relative;
+  height: 100vh; 
+}
+
+.skw-page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%; }
+  .skw-page__half {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    transition: transform 1s; }
+    .skw-page__half--left {
+      left: 0;
+      transform: translate3d(-32.4vh, 100%, 0); }
+    .skw-page__half--right {
+      left: 50%;
+      transform: translate3d(32.4vh, -100%, 0); }
+    .skw-page.active .skw-page__half {
+      transform: translate3d(0, 0, 0); }
+  .skw-page__skewed {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 140%;
+    height: 100%;
+    transform: skewX(-18deg);
+    background: rgb(255, 253, 253); 
+  }
+    .skw-page__half--left .skw-page__skewed {
+      left: -40%; }
+    .skw-page__half--right .skw-page__skewed {
+      right: -40%; }
+  .skw-page__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 30%;
+    color: rgb(0, 0, 0);
+    transform: skewX(18deg);
+    transition: transform 1s, opacity 1s;
+    background-size: cover; 
+  }
+    .skw-page__half--left .skw-page__content {
+      padding-left: 30%;
+      padding-right: 30%;
+      transform-origin: 100% 0; }
+    .skw-page__half--right .skw-page__content {
+      padding-left: 30%;
+      padding-right: 30%;
+      transform-origin: 0 100%; }
+    .skw-page.inactive .skw-page__content {
+      opacity: 0.5;
+      transform: skewX(18deg) scale(0.95); }
+  .skw-page__heading {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 60px;
+    text-align: center; }
+  .skw-page__description {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase; 
+
+  }
+  .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-content {
+  min-width: 200px;
+  min-height: 40px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #070707;
+background: linear-gradient(90deg, rgb(30, 36, 35) 0%, rgb(28, 51, 49) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(14, 20, 20, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  margin-top: 20px;
+  }
+
+.button-content::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(198px + 12px);
+  min-height: calc(40px + 12px);
+  border: 6px solid #131414;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button-content:hover, .button-content:focus {
+  color: #fffdfd;
+  transform: translateY(-6px);
+}
+
+.button-content:hover::before, .button-content:focus::before {
+  opacity: 1;
+}
+
+.button-content::after {
+  content: '';
+  width: 20px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #0f1f1b;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+.button-content:hover::after, .button-content:focus::after {
+  animation: none;
+  display: none;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+  .skw-page__link {
+    color: #524646; }
+  .skw-page-1 .skw-page__half--left .skw-page__content {
+    background-image: url("../image/content_1.jpg"); 
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  .skw-page-1 .skw-page__half--right .skw-page__content {
+    background: #fdfdfd; }
+  .skw-page-2 .skw-page__half--left .skw-page__content {
+    background: #fdfdfd; }
+  .skw-page-2 .skw-page__half--right .skw-page__content {
+    background-image: url("../image/content_2.jpg"); }
+  .skw-page-3 .skw-page__half--left .skw-page__content {
+    background-image: url("../image/content_3.jpg"); }
+  .skw-page-3 .skw-page__half--right .skw-page__content {
+    background: #fdfdfd; }
+/*# sourceMappingURL=index_2.css.map */
