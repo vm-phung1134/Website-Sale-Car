@@ -1,0 +1,383 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+.card-detail {
+  align-items: center;
+  background: #050505;
+  height: 120vh;
+  width: 100%;
+  box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.4);
+}
+.main-detail{
+  width: 100%;
+  display: flex;
+  padding: 20px 0px;
+  height: 100%;
+}
+.left {
+  margin-top:45px ;
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  background-color: #ff6d39;
+  border-radius: 0% 50% 50% 0%;
+  position: absolute;
+  z-index: 5;
+}
+.img-detail{
+  width: 600px;
+  height: 450px;
+  padding-left: 20px;
+}
+
+.right {
+  height: 100%;
+  width: 100%;
+  background-color: #2a2f40;
+  z-index: 3;
+}
+
+.product-info {
+  position: absolute;
+  height: 100%;
+  font-size: 20px;
+  margin:20px 630px;
+  width: 50%;
+  z-index: 10;
+  padding-left: 100px;
+  text-transform: uppercase;
+}
+
+.info-1 {
+  color: #ff6d39;
+  font-family: "lato";
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 21px;
+  display: inline-block;
+}
+
+i.fa.fa-search {
+  margin-left: 90px;
+}
+
+.product-name i {
+  color: #ffffff;
+  transition: 0.3s all ease;
+  margin: 0px 12px;
+}
+
+.product-name i:hover {
+  color: #ff6d39;
+  cursor: pointer;
+}
+
+.info-3 {
+  color: #ffffff;
+  font-family: "Lato";
+
+  margin-top: 84px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.info-2 {
+  color: #ffffff;
+  font-family: "Lato";
+  margin-top: 10px;
+  font-weight: 800;
+  font-size: 29px;
+}
+
+.info-4 {
+  display: inline-block;
+  color: #ffffff;
+  font-family: "Lato";
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.info-5{
+  font-size: 45px;
+}
+
+.discount {
+  display: inline-block;
+}
+
+.bg li {
+  color: #ffffff;
+  font-family: "lato";
+  margin-top: 20px;
+  font-weight: 500;
+  display: inline-block;
+  margin-right: 25px;
+}
+
+
+.foot-1 {
+  color: #ffffff;
+  font-family: "Lato";
+  margin-top: 20px;
+  margin-right: 50px;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 10px;
+  float: left;
+  background-color: #f76b39;
+  border: 1px solid;
+}
+
+.foot-1 i:nth-child(1) {
+  margin-left: 0;
+  margin-right: 15px;
+}
+
+.foot-1:hover {
+  color: #f5f2f0;
+  background-color: #000000;
+}
+.left i {
+  color: #ffd5c6;
+  margin-top: 260px;
+  transition: 0.3s all ease;
+}
+
+/*-------------------- btn scroll-----------------------------*/
+.body-btn {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  z-index: 4;
+  padding-right: 20px;
+}
+
+.scroll-btn{
+  position: relative;
+  width: 24px;
+  height: 24px;
+
+}
+
+.chevron {
+  position: absolute;
+  width: 50px;
+  height: 10px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.text-btn {
+  display: block;
+  margin-top: 75px;
+  margin-left: -15px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+/* ------------silde scroll------------------*/
+
+:root {
+	--card-height: 40vw;
+	--card-margin: 4vw;
+	--card-top-offset: 1em;
+	--numcards: 4;
+	--outline-width: 0px;
+}
+
+#card-details {
+	padding-bottom: calc(var(--numcards) * var(--card-top-offset)); /* Make place at bottom, as items will slide to that position*/
+	margin-bottom: var(--card-margin); /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+  top: 0;
+}
+
+#card_1 {
+	--index: 1;
+}
+
+#card_2 {
+	--index: 2;
+}
+
+#card_3 {
+	--index: 3;
+}
+.info-2-2{
+  font-size:40px;
+  font-family: "Lato";
+  text-transform: uppercase;
+  
+}
+.more-detail{
+  font-size:20px;
+  font-family: "Lato";
+}
+.card-detail2 {
+	position: sticky;
+	top: 0;
+	padding-top: calc(var(--index) * var(--card-top-offset));
+}
+
+@supports (animation-timeline: works) {
+
+	@scroll-timeline cards-element-scrolls-in-body {
+		source: selector(body);
+		scroll-offsets:
+			/* Start when the start edge touches the top of the scrollport */
+			selector(#cards) start 1,
+			/* End when the start edge touches the start of the scrollport */
+			selector(#cards) start 0
+		;
+		start: selector(#cards) start 1; /* Start when the start edge touches the top of the scrollport */
+		end: selector(#cards) start 0; /* End when the start edge touches the start of the scrollport */
+		time-range: 4s;
+	}
+
+	.card-details {
+		--index0: calc(var(--index) - 1); /* 0-based index */
+		--reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
+		--reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
+	}
+	
+	.card__content {
+		transform-origin: 50% 0%;
+		will-change: transform;
+
+		--duration: calc(var(--reverse-index0) * 1s);
+		--delay: calc(var(--index0) * 1s);
+
+		animation: var(--duration) linear scale var(--delay) forwards;
+		animation-timeline: cards-element-scrolls-in-body;
+	}
+
+	@keyframes scale {
+		to {
+			transform:
+				scale(calc(
+					1.1
+					-
+					calc(0.1 * var(--reverse-index))
+				));
+		}
+	}
+}
+
+#card-details {
+	list-style: none;
+	outline: calc(var(--outline-width) * 10) solid blue;
+	
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--numcards), var(--card-height));
+	gap: var(--card-margin);
+}
+
+.card-detail2 {
+	outline: var(--outline-width) solid hotpink;
+}
+
+.card__content {
+	box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
+	background: rgb(255, 255, 255);
+	color: rgb(10, 5, 7);
+	border-radius: 1em;
+	overflow: hidden;
+
+	display: grid;
+	grid-template-areas: "text img";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+
+	align-items: stretch;
+	outline: var(--outline-width) solid lime;
+}
+
+.card__content > div {
+	grid-area: text;
+	width: 80%;
+	place-self: center;
+	text-align: left;
+
+	display: grid;
+	gap: 1em;
+	place-items: start;
+}
+
+.card__content > figure {
+	grid-area: img;
+	overflow: hidden;
+}
+.img-detail2{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.more-detail {
+	font-family: sans-serif;
+	font-size: 20px;
+}
+
+

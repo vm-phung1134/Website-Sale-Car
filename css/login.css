@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
 *
 {
     margin: 0;
@@ -25,6 +26,7 @@
 	position:relative;
 	box-shadow: 15px 11px 20px 11px #e8e8e91f;
 	border-radius: 30px;
+	font-family: "lato";
 }
 .toggle-btn
 {
@@ -36,6 +38,7 @@
 	position: relative;
 	font-size: 17px;
 	color: white;
+	font-family: "lato";
 }
 #btn
 {
@@ -104,13 +107,14 @@
 	margin: auto;
 	background: #05ad46;
 	border: 0;
+	color: #eeeaea;
 	outline: none;
 	font-size: 18px;
-	
+	font-family: "lato";
 }
-.submit-btn a{
-	text-decoration: none;
-	color: white;
+.submit-btn:hover{
+	background: #111111;
+	color: #fafafa;
 }
 .check-box
 {
@@ -124,6 +128,7 @@ span
 	font-family: Arial, Helvetica, sans-serif;
 	position:absolute;
 	letter-spacing: 1px;
+	font-family: "lato";
 }
 #login
 {
@@ -133,6 +138,7 @@ span
 {
 	color:rgb(253, 252, 252);
 	font-size:17;
+	font-family: "lato";
 }
 
 #register
@@ -143,6 +149,7 @@ span
 {
 	color:rgb(243, 239, 239);
 	font-size: 17;
+	font-family: "lato";
 }
 #admin
 {
@@ -152,11 +159,12 @@ span
 {
 	color:rgb(253, 252, 252);
 	font-size:17;
+	font-family: "lato";
 }
 
 .container_logo{
 	position: absolute;
-	top: 14%;
+	top: 15%;
 	left: 4%;
 	transform: translate(-5%,-5%);
 	width: 50%;
@@ -196,4 +204,24 @@ span
 	  letter-spacing: 8px;
 	  margin-bottom: -40px;
 	}
+  }
+
+  @media  screen and (max-width:868px) {
+	.container_logo {
+		position: absolute;
+		top: 16%;
+		left: 4%;
+		transform: translate(-5%,-5%);
+		width: 100%;
+		text-align: center;
+	}
+	.text1{
+		color: rgb(12, 11, 11);
+		font-size: 43px;
+		font-weight: 700;
+		letter-spacing: 3px;
+		margin-bottom: 90px;
+		position: relative;
+		width: 100%;
+	  }
   }
