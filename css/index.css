@@ -14,7 +14,18 @@ body {
 *:focus {
   outline: 0;
 }
-
+.header{
+  margin-top: -90px;
+}
+.container_logo{
+  width: 300px;
+  height: 100px;
+}
+.container_logo img{
+  height: 300px;
+  width: 350px;
+  
+}
 .nav_1{
 	position: relative;
 	margin: 20px 130px 10px 130px;
@@ -43,6 +54,7 @@ body {
 
 }
 .nav_1 .animation{
+  text-decoration: none;
 	position: absolute;
 	height: 100%;
   width: auto;

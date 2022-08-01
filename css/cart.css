@@ -1,0 +1,335 @@
+/* Global settings */
+/* Global "table" column settings */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+.product-image-cart {
+    float: left;
+    width: 20%; text-align: center;}
+  
+  .product-details-cart {
+    float: left;
+    width: 37%; text-align: center;}
+  
+  .product-price-cart {
+    float: left;
+    width: 12%; }
+  
+  .product-quantity-cart {
+    float: left;
+    width: 10%; }
+  
+  .product-removal {
+    float: right;
+    width: 12%; 
+    text-align: center;
+  }
+  
+  .product-line-price {
+    float: left;
+    width: 9%;
+    text-align: center;
+    }
+  .space{
+    padding-top: 50px;
+  }
+  /* This is used as the traditional .clearfix class */
+  .group:before, .shopping-cart:before, .column-labels:before, .product-cart:before, .totals-item:before,
+  .group:after,
+  .shopping-cart:after,
+  .column-labels:after,
+  .product-cart:after,
+  .totals-item:after {
+    content: '';
+    display: table; }
+  
+  .group:after, .shopping-cart:after, .column-labels:after, .product-cart:after, .totals-item:after {
+    clear: both; }
+  
+  .group, .shopping-cart, .column-labels, .product-cart, .totals-item {
+    zoom: 1; }
+  
+  /* Apply clearfix in a few places */
+  /* Apply dollar signs */
+
+  .shopping-cart {
+    padding: 180px 0; 
+    margin:0 2%;
+  }
+  .back-page{
+    background-color: #6b6;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 0 30px 50px;
+    border-radius: 4px;
+  }
+  .back-page a{
+    color: rgb(250, 245, 245);
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "lato";
+    cursor: pointer;
+  }
+  .back-page:hover{
+    background-color:rgb(87, 85, 85);
+  }
+  /* Column headers */
+  .column-labels label {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: 'Lato';
+    font-weight: bold;
+    border-bottom: 2px solid rgb(235, 95, 95); 
+  }
+  
+  /* Product entries */
+  .product-cart {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 17px;
+    font-family: 'lato';
+    border-bottom: 2px solid rgb(233, 71, 71);
+  }
+  .product-cart .product-image-cart {
+      text-align: center; }
+  .product-cart .product-image-cart img {
+    width: 85%;
+    height: 160px; 
+    background: #fff;
+  }
+  .product-title-cart{
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-top:15px ;
+  }
+    .product-cart .product-details-cart .product-title-cart {
+      margin-right: 20px;
+      font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium"; }
+    .product-cart .product-details-cart .product-description-cart {
+      margin: 5px 30px 5px 30px;
+      line-height: 1.4em; }
+      input[type="number"]{
+        padding-left: 40px;
+      }
+
+    .product-cart .product-quantity-cart input {
+      width: 100px;
+      font-size: 18px;
+      align-content: center; 
+    }
+    .product-cart .remove-product {
+      border: 0;
+      padding: 4px 8px;
+      background-color: #c66;
+      color: rgb(250, 250, 250);
+      font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+      font-size: 16px;
+      border-radius: 3px; }
+    .product-cart .remove-product:hover {
+      background-color: rgb(240, 111, 111);
+      cursor: pointer;
+     }
+  
+  /* Totals section */
+  .totals{
+    padding-right: 160px;
+    font-size: 18px;
+    font-family: 'Lato';
+  }
+  .totals .totals-item {
+    float: right;
+    clear: both;
+    width: 100%;
+    margin-bottom: 10px; }
+    .totals .totals-item label {
+      float: left;
+      clear: both;
+      width: 79%;
+      text-align: right; }
+    .totals .totals-item .totals-value {
+      float: right;
+      width: 21%;
+      text-align: right;
+     }
+     .totals-item-total{
+      color: rgb(28, 140, 214);
+      font-weight: bold;
+      font-size: 19px;
+     }
+     .checkout {
+      float: right;
+      border: 0;
+      margin: 0 25px;
+      padding: 6px 25px;
+      background-color: #6b6;
+      color: #fff;
+      font-size: 17px;
+      font-family: 'lato';
+      cursor: pointer;
+      border-radius: 3px;
+  }
+    .checkout a{
+      text-decoration: none;
+      color: #fff;
+    }
+  
+    .checkout:hover{
+    background-color: rgb(94, 94, 94); 
+    color: rgb(248, 245, 245);
+  }
+
+  .custom-select {
+    position: relative;
+    font-family: Arial;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    float: right;
+    margin: 10px 155px;
+    left: 0;
+
+}
+  .custom-select select {
+    display: none; /*hide original SELECT element:*/
+  }
+  
+  .select-selected {
+    background-color: DodgerBlue;
+  }
+  
+  /*style the arrow inside the select element:*/
+  .select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+  }
+  
+  /*point the arrow upwards when the select box is open (active):*/
+  .select-selected.select-arrow-active:after {
+    border-color: transparent transparent #fff transparent;
+    top: 7px;
+  }
+  
+  /*style the items (options), including the selected item:*/
+  .select-items div,.select-selected {
+      color: #ffffff;
+      padding: 8px 16px;
+      border: 1px solid transparent;
+      border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+      cursor: pointer;
+      user-select: none;
+      width: 250px;
+      font-size: 17px;
+      font-family: 'lato';
+      text-align: center;
+      border-radius: 3px;
+  }
+  
+  /*style items (options):*/
+  .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    right:0;
+    z-index: 99;
+    text-align: center;
+  }
+  
+  /*hide the items when the select box is closed:*/
+  .select-hide {
+    display: none;
+  }
+  
+  .select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Make adjustments for tablet */
+  @media screen and (max-width: 650px) {
+    .shopping-cart {
+      margin: 0;
+      padding-top: 20px;
+      border-top: 1px solid #eee; }
+  
+    .column-labels {
+      display: none; }
+  
+    .product-image-cart {
+      float: right;
+      width: auto; }
+      .product-image-cart img {
+        margin: 0 0 10px 10px; }
+  
+    .product-details-cart {
+      float: none;
+      margin-bottom: 10px;
+      width: auto; }
+  
+    .product-price-cart {
+      clear: both;
+      width: 70px; }
+  
+    .product-quantity-cart {
+      width: 100px; }
+      .product-quantity-cart input {
+        margin-left: 20px; }
+  
+    .product-quantity-cart:before {
+      content: 'x'; }
+  
+    .product-removal {
+      width: auto; }
+  
+    .product-line-price {
+      float: right;
+      width: 70px; } }
+  /* Make more adjustments for phone */
+  @media screen and (max-width: 350px) {
+    .product-removal {
+      float: right; }
+  
+    .product-line-price {
+      float: right;
+      clear: left;
+      width: auto;
+      margin-top: 10px; }
+  
+    .product-cart .product-line-price:before {
+      content: 'Item Total: $'; }
+  
+    .totals .totals-item label {
+      width: 60%; }
+    .totals .totals-item .totals-value {
+      width: 40%; } }
+  
+  /*# sourceMappingURL=cart.css.map */
+  

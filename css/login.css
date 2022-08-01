@@ -161,7 +161,6 @@ span
 	font-size:17;
 	font-family: "lato";
 }
-
 .container_logo{
 	position: absolute;
 	top: 15%;
@@ -178,14 +177,14 @@ span
 	font-size: 52px;
 	font-weight: 700;
 	letter-spacing: 3px;
-	margin-bottom: 90px;
+	margin-bottom: 100px;
 	position: relative;
 	animation: text 3s 1;
   }
   .text2{
 	font-size: 22px;
 	color: #fafafa;
-	margin-bottom: 50px;
+	margin-bottom: 60px;
 	background-color: #03702d;
 	border-bottom-right-radius: 30px;
 	padding: 1%;

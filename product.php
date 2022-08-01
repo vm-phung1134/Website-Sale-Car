@@ -43,7 +43,6 @@
                 while($row2=mysqli_fetch_assoc($res2)){
                     $product_id=$row2['product_id'];
                     $product_name=$row2['product_name'];
-                    $product_descript=$row2['product_descript'];
                     $image=$row2['image'];
                     $price=$row2['price'];
                     ?>

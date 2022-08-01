@@ -22,10 +22,11 @@
   width: 100%;
 }
 .product-img img{
-  width: 500px;
-  height: 400px;
+  width: 400px;
+  height: 350px;
   align-items: center;
-  margin-left: 32%;
+  margin-left: 35%;
+  margin-top: 55px;
 }
 * {
   margin: 0;

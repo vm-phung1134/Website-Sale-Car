@@ -1,5 +1,6 @@
 <?php include('lib/header.php'); ?>
     <link rel="stylesheet" href="css/detail.css">
+    
     <?php
         if(isset($_GET['product_id'])){
             $product_id = $_GET['product_id'];
@@ -7,7 +8,8 @@
             $res=mysqli_query($conn,$sql);
             $row=mysqli_fetch_assoc($res);
             $product_name=$row['product_name'];
-        }else{
+        }
+        else{
             header('location:');
         }
     ?>
@@ -36,6 +38,15 @@
                                 <div class="product-info">
                                     <div class="product-name">
                                         <h1 class="info-1">Details of Product</h1>
+                                        <div class="clear"></div>
+                                        <br>
+                                        <?php 
+                                            if(isset($_SESSION['cart']))
+                                            {
+                                                echo $_SESSION ['cart'];
+                                                unset($_SESSION ['cart']);
+                                            }
+                                        ?>
                                     </div>
                                     <div class="details">
                                         <h3 class="info-3"><?php echo $product_name ?></h3>
@@ -48,7 +59,7 @@
                                             if($count2>0){
                                                 $price=$row2['price'];
                                                 ?>
-                                                    <h5 class="info-5"><?php echo $price ?></h5>
+                                                    <h5 class="info-5"><?php echo $price."$" ?></h5>
                                                 <?php 
                                                 
                                             }else{
@@ -56,13 +67,67 @@
                                             }
                                         ?>
                                     </div>
-                                    <h4 class="info-4">Quanlity: </h4>
+                                    <form action="" method="POST">
+                                    <div class="quanlity">
+                                        <h4 class="info-4">Quanlity: </h4>
+                                        <input type="number" value="1" min="1" name="quanlity">
+                                    </div>
                                     
                                     <ul class="bg">
-                                        <h4 class="info-4">Color: </h4>                      
+                                        <h4 class="info-4">COLOR: </h4>
+                                        <li class="yellow"></li>
+                                        <li class="black"></li>
+                                        <li class="blue"></li>
                                     </ul>
-                                    <p class="foot-1">Buy Now</p>
-                                    <p class="foot-1">Add TO Cart</p>
+                                    
+                                    <?php
+                                    if (isset($_SESSION['login'])){
+                                                ?>  
+                                                    <p class="foot-1">Buy Now</p>
+                                                    <input class="foot-1" type="submit" name="submit_5" value="ADD TO CART">
+                                                </form>
+                                                <?php        
+                                    }else{
+                                            ?>
+                                                <p class="foot-1"><a href="login.php">Login now</a></p>
+                                            <?php 
+                                        }
+                                ?>
+                                
+                                <?php
+                                if(isset($_POST['submit_5'])){
+                                    $product_id=$_GET['product_id'];
+                                    $quanlity=$_POST['quanlity'];
+                                    $sql5 = "SELECT * FROM tbl_product WHERE product_id=$product_id";
+                                    $res5=mysqli_query($conn,$sql5);
+                                    if($res5==TRUE){
+                                        $count5 = mysqli_num_rows($res5);
+                                        if($count5==1){
+                                            $row5=mysqli_fetch_assoc($res5);
+                                            $product_name = $row5['product_name'];
+                                            $product_id=$row5['product_id'];
+                                            $image = $row5['image'];
+                                            $price=$row5['price'];
+                                            $user_id = $_SESSION['user-id'];
+                                            $sql6 = "INSERT INTO tbl_cart SET
+                                                    customer_id='$user_id',
+                                                    product_id='$product_id',
+                                                    product_name='$product_name',
+                                                    img='$image',
+                                                    quanlity='$quanlity',
+                                                    price='$price'
+                                                    ";
+                                                    $res6 = mysqli_query($conn,$sql6) or die();
+                                                    if($res6==TRUE){
+                                                    }
+                                                    else{
+                                                        header('location:');
+                                                    }
+                                                }    
+                                        }
+ 
+                                    }
+                                ?>
                                 </div>
                             </div>
                         </div>
@@ -120,7 +185,7 @@
                 echo  '<div>Not Found</div>';
             }
         ?>
-    
+    </script>
 <?php include('lib/footer.php'); ?>
 
 

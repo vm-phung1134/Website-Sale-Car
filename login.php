@@ -42,7 +42,9 @@
                             $count1 = mysqli_num_rows($res1);
                             if($count1==1){
                                 $customer_name=$row1['customer_name'];
+                                $customer_id=$row1['customer_id'];
                                 $_SESSION['login'] = "<div style='color:#ececee; font-size:9vh;font-weight:800'>WELCOME, $customer_name</div>";
+                                $_SESSION['user-id'] =$customer_id;
                                 header('location:../NewWS_Technology/index.php');
                             }else{
                                 $_SESSION['login'] = "<div style ='color:red; font-size:20px; display:flex; justify-content:center;'>Account or Password incorrect</div>";

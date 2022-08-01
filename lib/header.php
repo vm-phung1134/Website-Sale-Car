@@ -8,21 +8,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Star Car | Sale Car</title>
         <link rel="stylesheet" style="text/css" href="css/index.css">
-        <link rel="stylesheet" style="text/css" href="css/login.css">
         <link rel="stylesheet" style="text/css" href="css/index_2.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     </head>
     <body>
         <div class="header">
             <div class="container_logo">
-                <span class="text1" style="color:white;">Star<img src="image/wheel.png" width="60px" height="60px">Car</span>
+                <a href="index.php"><img src="image/logo.png" alt=""></a>
              </div>
             <nav class="nav_1">
-                <a href="index.php">Home</a>
-                <a href="#">Event</a>
-                <a href="cart.php">Cart</a>
-                <a href="category.php">Category</a>
-                <a href="#">Contact</a>
+                <a href="index.php"style="text-decoration:none;color:white;">Store</a>
+                <a href="#"style="text-decoration:none;color:white;">Product</a>
+                <a href="order.php"style="text-decoration:none;color:white;">Order</a>
+                <a href="category.php"style="text-decoration:none;color:white;">Category</a>
+                <a href="#"style="text-decoration:none;color:white;">Contact</a>
                 <div class="animation start-home"></div>
             </nav>
             <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
@@ -42,7 +41,7 @@
                             }
                         
                         ?>
-                        <li><a href="#">Sign Out</a></li>
+                        <li><a href="logout.php">Sign Out</a></li>
                         <li><a href="#">Account</a></li>
                         <li><a href="#">Support</a></li>
                     </ul>
@@ -56,6 +55,16 @@
 
             <div class="cart">
                 <ul class="cart-icon">
-                    <li><a href="#" id="cart"><i class="fa fa-shopping-cart" ></i></a></li>
+                    <?php if(isset($_SESSION['login'])) {
+                        ?>
+                            <li><a href="cart.php" id="cart"><i class="fa fa-shopping-cart" ></i></a></li>
+                        <?php 
+                        
+                    }else{
+                        ?>
+                            <li><a href="login.php" id="cart"><i class="fa fa-shopping-cart" ></i></a></li>
+                        <?php                     
+                        }
+                    ?>  
                 </ul>
             </div>
