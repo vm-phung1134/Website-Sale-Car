@@ -33,21 +33,21 @@
                 $subtotal=0;
                 $shipping=1500;
                 while($row2=mysqli_fetch_assoc($res2)){
+                    $cart_id=$row2['cart_id'];
                     $customer_id=$row2['customer_id'];
                     $product_id=$row2['product_id'];
                     $product_name=$row2['product_name'];
                     $img=$row2['img'];
                     $quanlity=$row2['quanlity'];
                     $price=$row2['price'];
-                    $info=$row2['info'];
                     ?>
                         <div class="product-cart">
-                          <div class="product-image-cart">
+                        <input type="checkbox" id="myCheck" class="checkbox-cart" name="checkbox_cart" value="Yes">
+                        <div class="product-image-cart">
                             <img src="image/<?php echo $img; ?>">
                           </div>
                           <div class="product-details-cart">
                             <div class="product-title-cart"><?php echo $product_name ?></div>
-                            <p class="product-description-cart"><?php echo $info ?></p>
                           </div>
                           <div class="product-price-cart">
                           <div class="space"></div>
@@ -59,7 +59,7 @@
                           <div class="product-removal">
                           <div class="space"></div>
                             <button class="remove-product">
-                              Remove
+                              <a href="del_cart.php?cart_id=<?php echo $cart_id; ?>">Remove</a>
                             </button>
                           </div>
                           <div class="space"></div>
@@ -103,22 +103,14 @@
         ?>
 
 
-  
-<div class="custom-select">
-  
-  <select>
-    <option value="0">Mode of Payment</option>
-    <option value="1">Momo</option>
-    <option value="2">Zalopay</option>
-    <option value="3">Banking</option>
-    <option value="4">Pay Cash</option>
-    
-  </select>
-  <button class="checkout"><a href="order.php">Payment</a></button>
-</div>
+<form action="payment.php" method="POST" id="hi">  
+    <button type="submit" class="checkout" name="submit-order">Payment</button>
+</form>
+
       
 
 </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/cart.js"></script>
 <?php include('lib/footer.php'); ?>
+

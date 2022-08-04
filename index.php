@@ -49,7 +49,7 @@
                         <div class="skw-page__half skw-page__half--right">
                             <div class="skw-page__skewed">
                                 <div class="skw-page__content">
-                                    <h2 class="skw-page__heading">Create your lamborghini</h2>
+                                    <h2 class="skw-page__heading">Create your Volkswagen</h2>
                                     <p class="skw-page__description">Configurator</p>
                                     <div class="wrap">
                                         <button class="button-content">GO ⇨</button>
@@ -123,6 +123,14 @@
                         </p>
                         <a href="#" class="blog-post-cta">Read More</a>
                     </div>
+                </div>
+                <div class="body-btn">
+                            <div class="scroll-btn">
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <div class="chevron"></div>
+                                <p class="text-btn">More Detail</p>
+                            </div>
                 </div>
             </div>
 <?php include('lib/footer.php'); ?>        

@@ -31,7 +31,8 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Istok Web", sans-serif; }
+  font-family: inherit; 
+}
 
   .main-product {
     display: flex;
@@ -46,7 +47,7 @@
   position: relative;
   width: 420px;
   height: 480px;
-  background: #191919;
+  background: #41486afc;
   margin: 10px;
   border-radius: 20px;
   overflow: hidden; }
@@ -96,8 +97,9 @@
   font-size: 20px;
   color: white;
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  font-family: inherit;
+ }
 
 .card .contentBox .price {
   font-size: 24px;
@@ -133,18 +135,17 @@
   height: 300px;
   width: auto;
 }
+.product{
+  text-align: center;
+}
 .product h1{
-  font-size: 30px;
+  font-size: 25px;
   margin: 10px;
   letter-spacing: 1px;
-  padding-left:12%;
   color: #000000;
   background-color: #faf9f9;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: inherit;
   width: 50%;
-  border-left:30px solid #121312;
-  border-right:30px solid #111111;
-  border-top:5px solid transparent;
-  border-bottom:5px solid transparent;
+  text-transform: uppercase;
   
 }

@@ -1,0 +1,213 @@
+.content-payment{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    color: rgb(31, 29, 29);
+    padding: 30px 10px;
+    font-family: inherit;
+}
+.order-payment{
+    width: 100%;
+    background-color: #ffff;
+    height: fit-content;
+    padding: 20px;
+    border: 1px solid rgb(138, 25, 25);
+}
+.tbl-full{
+    width: 100%;  
+}
+table tr th{
+    border-bottom: 1px solid grey;
+    padding:1%;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-family: inherit;
+    background-color: rgb(62, 140, 204);
+}
+table tr td{
+    padding: 1%;
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    font-family: inherit;
+}
+.info{
+    width: 50%;
+    height: 500px;
+    border: 1px solid rgb(151, 37, 37);
+    background-color: #ffff;
+    padding: 20px;
+}
+.info-client p{
+    color: rgb(14, 13, 13);
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+.note{
+    font-family: inherit;
+    font-weight:bold;
+}
+.title-h1{
+    text-align: center;
+    margin: 10px;
+    font-size: 21px;
+    font-family: inherit;
+    text-transform: uppercase;
+}
+.totals{
+    padding-top: 10px;
+    font-size: 18px;
+    font-family: inherit;
+  }
+  .totals .totals-item {
+    float: right;
+    clear: both;
+    width: 100%;
+    margin-bottom: 10px; }
+    .totals .totals-item label {
+      float: left;
+      clear: both;
+      width: 79%;
+      text-align: right; }
+    .totals .totals-item .totals-value {
+      float: right;
+      width: 21%;
+      text-align: right;
+     }
+     .checkout {
+        float: right;
+        border: 0;
+        padding: 6px 25px;
+        background-color: #6b6;
+        color: #fff;
+        font-size: 17px;
+        height: 40px;
+        font-family: inherit;
+        cursor: pointer;
+    }
+      .checkout a{
+        text-decoration: none;
+        color: #fff;
+      }
+    
+      .checkout:hover{
+      background-color: rgb(94, 94, 94); 
+      color: rgb(248, 245, 245);
+    }
+    .info-client2 {
+        text-align: center;
+      }
+       
+      .btn-client {
+        border: none;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        color: #fff;
+        font-size: 18px;
+        background-color: rgb(88, 88, 88);
+        padding: 10px 60px;
+        margin-bottom: 10px;
+        font-family: inherit;
+        letter-spacing: 1px;
+        height: 40px;
+        box-shadow: 0 5px 15px rgba(19, 48, 87, 0.2);
+      }
+         
+      .btn-client:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 790%;
+        width: 530%;
+        background: #42c3d1;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+        transform: translateX(-98%) translateY(-25%) rotate(45deg);
+      }
+       
+      .btn-client:hover:after {
+        -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+        transform: translateX(-9%) translateY(-25%) rotate(45deg);
+      }
+
+      .custom-select {
+        position: relative;
+        font-family: Arial;
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        float: right;
+        left: 0;
+    
+    }
+    .custom-select select{
+      background-color: rgb(252, 250, 250);
+      color: rgb(32, 87, 160);
+      font-size: 17px;
+      margin-right: 10px;
+      border: 1px solid #0a2d31;
+    }
+
+      .select-selected {
+        background-color: DodgerBlue;
+      }
+      .pt{
+        background-color: #6b6;
+      }
+      /*style the arrow inside the select element:*/
+      .select-selected:after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-color: #fff transparent transparent transparent;
+      }
+      
+      /*point the arrow upwards when the select box is open (active):*/
+      .select-selected.select-arrow-active:after {
+        border-color: transparent transparent #fff transparent;
+        top: 7px;
+      }
+      
+      /*style the items (options), including the selected item:*/
+      .select-items div,.select-selected {
+          color: #ffffff;
+          padding: 8px 16px;
+          border: 1px solid transparent;
+          border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+          cursor: pointer;
+          user-select: none;
+          width: 250px;
+          font-size: 17px;
+          font-family: 'lato';
+          text-align: center;
+          border-radius: 3px;
+      }
+      
+      /*style items (options):*/
+      .select-items {
+        position: absolute;
+        background-color: DodgerBlue;
+        top: 100%;
+        right:0;
+        z-index: 99;
+        text-align: center;
+      }
+      
+      /*hide the items when the select box is closed:*/
+      .select-hide {
+        display: none;
+      }
+      
+      .select-items div:hover, .same-as-selected {
+        background-color: rgba(0, 0, 0, 0.1);
+      }

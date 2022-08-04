@@ -52,7 +52,7 @@
                                 </div>
                                 <div class="contentBox">
                                     <h3><?php echo $product_name ?></h3>
-                                    <h2 class="price"><?php echo $price; ?></h2>
+                                    <h2 class="price"><?php echo $price."$"; ?></h2>
                                     <div class="btn-product"> 
                                         <a href="#" class="buy">Buy Now</a>
                                         <a href="#" class="buy">Add Cart</a>

@@ -1,13 +1,20 @@
 /* Global settings */
 /* Global "table" column settings */
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+.checkbox-cart{
+  float: left;
+  margin-top: 70px;
+  height: 25px;
+  width: 25px;
+}
 .product-image-cart {
     float: left;
+    margin-left: 2%;
     width: 20%; text-align: center;}
   
   .product-details-cart {
     float: left;
-    width: 37%; text-align: center;}
+    width: 35%; text-align: center;}
   
   .product-price-cart {
     float: left;
@@ -88,6 +95,7 @@
     margin-bottom: 20px;
     padding-bottom: 10px;
     font-size: 17px;
+    margin-left: 2%;
     font-family: 'lato';
     border-bottom: 2px solid rgb(233, 71, 71);
   }
@@ -123,9 +131,14 @@
       padding: 4px 8px;
       background-color: #c66;
       color: rgb(250, 250, 250);
-      font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+      font-family: "Lato";
       font-size: 16px;
       border-radius: 3px; }
+      .remove-product a{
+        text-decoration: none;
+        color: #fff;
+        font-family: "lato";
+      }
     .product-cart .remove-product:hover {
       background-color: rgb(240, 111, 111);
       cursor: pointer;
@@ -160,8 +173,8 @@
      .checkout {
       float: right;
       border: 0;
-      margin: 0 25px;
-      padding: 6px 25px;
+      margin-right: 160px;
+      padding: 10px 30px;
       background-color: #6b6;
       color: #fff;
       font-size: 17px;
@@ -172,6 +185,7 @@
     .checkout a{
       text-decoration: none;
       color: #fff;
+      text-align: center;
     }
   
     .checkout:hover{

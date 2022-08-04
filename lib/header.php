@@ -6,7 +6,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Star Car | Sale Car</title>
+        <title>Star Car Store</title>
         <link rel="stylesheet" style="text/css" href="css/index.css">
         <link rel="stylesheet" style="text/css" href="css/index_2.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -18,7 +18,7 @@
              </div>
             <nav class="nav_1">
                 <a href="index.php"style="text-decoration:none;color:white;">Store</a>
-                <a href="#"style="text-decoration:none;color:white;">Product</a>
+                <a href="product_store.php"style="text-decoration:none;color:white;">Product</a>
                 <a href="order.php"style="text-decoration:none;color:white;">Order</a>
                 <a href="category.php"style="text-decoration:none;color:white;">Category</a>
                 <a href="#"style="text-decoration:none;color:white;">Contact</a>

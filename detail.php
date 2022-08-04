@@ -115,7 +115,8 @@
                                                     product_name='$product_name',
                                                     img='$image',
                                                     quanlity='$quanlity',
-                                                    price='$price'
+                                                    price='$price',
+                                                    mode_pay='None'
                                                     ";
                                                     $res6 = mysqli_query($conn,$sql6) or die();
                                                     if($res6==TRUE){

@@ -2,7 +2,7 @@
 body {
     min-height: 100vh;
     background-size: cover;
-    font-family: 'Lato', sans-serif;
+    font-family: monospace;
     color: rgba(116, 116, 116, 0.667);
     background: linear-gradient(140deg , rgb(0, 0, 0) , 50% , #000000);    
     
@@ -17,22 +17,75 @@ p {
     margin-bottom: 7px;
 
 }
+.card{
+    margin-bottom: 10px;
+}
 .wrapper-btn {
     text-align: center;
 }
 .delete-order{
-    width: 150px;
+    width: 170px;
     margin-bottom: 20px;
     color: #fff;
-    font-weight: 700;
-    font-size: 14px;
-    background-color: #222;
-    padding: 5px 30px;
+    font-size: 17px;
+    background-color: rgb(206, 79, 79);
+    padding: 5px 20px;
     height: 40px;
     cursor: pointer;
     text-transform: uppercase;
+    border: 0;
     box-shadow: 0 5px 15px rgba(0,0,0,0.20);
 }
+.cancel-items {
+    text-align: right;
+}
+.delete-items{
+    width: 90px;
+    border: 1px solid #ffff;
+    background-color: rgb(199, 76, 76);
+    padding: 3px;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(189, 63, 63, 0.2);
+    font-family: monospace;
+}
+.delete-items a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+
+}
+.delete-items a:hover{
+    text-decoration: none;
+    color: #fff;
+}
+
+.totals{
+    margin-top: 10px;
+    font-family: monospace;
+}
+  .totals .totals-item {
+    float: right;
+    clear: both;
+    width: 100%; }
+    .totals .totals-item label {
+      float: left;
+      font-size: 17px;
+      clear: both;
+      width: 79%;
+      text-align: right; }
+    .totals .totals-item .totals-value {
+      float: right;
+      width: 21%;
+      font-size: 17px;
+      text-align: right;
+     }
+     .totals-item-total{
+      color: rgb(28, 140, 214);
+      font-weight: bold;
+      font-size: 19px;
+     }
+
 .client{
     border: 1px solid #000000;
     padding: 10px;
@@ -40,15 +93,17 @@ p {
 }
 .cl-1{
     font-size: 15px;
+    font-family: monospace;
 }
 .small {
     letter-spacing: 0.5px !important;
+    font-family: monospace;
 }
 
 .card-1 {
     box-shadow: 2px 2px 10px 0px rgb(133, 131, 132);
     margin-top: 10px;
-    width: 60%;
+    width: 70%;
     font-size: 20px;
 }
 
@@ -70,7 +125,7 @@ p {
   color: #fff;
   font-weight: 700;
   font-size: 15px;
-  background-color: #222;
+  background-color: rgb(78, 168, 209);
   padding: 10px 60px;
   margin-bottom: 10px;
   height: 40px;
@@ -89,7 +144,7 @@ p {
   top: 0;
   height: 790%;
   width: 530%;
-  background: #78c7d2;
+  background: #0a2d31;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
   -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
@@ -108,7 +163,7 @@ hr {
     background-color: rgba(248, 248, 248, 0.667);
 }
 .mb-1{
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .bold {
@@ -119,8 +174,10 @@ hr {
 }
 .mb-5{
     font-size: 20px;
-    padding-top: 30px;
+    padding-top: 20px;
+
 }
+
 .change-color {
     color: #030303 !important;
     font-size: 23px;
@@ -138,6 +195,7 @@ button.button_search{
     font-size: 18px;
     text-align: center;
 }
+
 
 .fa-circle {
     font-size: 8px;
